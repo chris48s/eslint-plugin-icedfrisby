@@ -47,10 +47,12 @@ This plugin exports a recommended config:
 <!-- begin auto-generated rules list -->
 
 💼 Configurations enabled in.\
+⚠️ Configurations set to warn in.\
 ✅ Set in the `recommended` configuration.
 
-| Name                                                   | Description              | 💼 |
-| :----------------------------------------------------- | :----------------------- | :- |
-| [no-exclusive-tests](docs/rules/no-exclusive-tests.md) | Disallow exclusive tests | ✅  |
+| Name                                                   | Description              | 💼 | ⚠️ |
+| :----------------------------------------------------- | :----------------------- | :- | :- |
+| [no-exclusive-tests](docs/rules/no-exclusive-tests.md) | Disallow exclusive tests | ✅  |    |
+| [no-skipped-tests](docs/rules/no-skipped-tests.md)     | Disallow skipped tests   |    | ✅  |
 
 <!-- end auto-generated rules list -->
