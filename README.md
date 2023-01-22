@@ -1,5 +1,9 @@
 # eslint-plugin-icedfrisby
 
+[![Build](https://github.com/chris48s/eslint-plugin-icedfrisby/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/chris48s/eslint-plugin-icedfrisby/actions/workflows/build.yml)
+![version](https://img.shields.io/npm/v/eslint-plugin-icedfrisby)
+![license](https://img.shields.io/npm/l/eslint-plugin-icedfrisby)
+
 ESLint rules for [IcedFrisby](https://github.com/IcedFrisby/IcedFrisby).
 
 ## Installation
