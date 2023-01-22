@@ -6,7 +6,9 @@ module.exports = {
     "eslint:recommended",
     "plugin:eslint-plugin/recommended",
     "plugin:node/recommended",
+    "prettier",
   ],
+  plugins: ["prettier"],
   env: {
     node: true,
   },
@@ -16,4 +18,7 @@ module.exports = {
       env: { mocha: true },
     },
   ],
+  rules: {
+    "prettier/prettier": ["error"],
+  },
 };
