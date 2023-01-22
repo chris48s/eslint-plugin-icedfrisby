@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-icedfrisby",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "ESLint rules for IcedFrisby",
   "keywords": [
     "eslint",
     "eslintplugin",

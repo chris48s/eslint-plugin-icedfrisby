@@ -1,24 +1,16 @@
 # eslint-plugin-icedfrisby
 
-TODO
+ESLint rules for [IcedFrisby](https://github.com/IcedFrisby/IcedFrisby).
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/):
-
 ```sh
-npm i eslint --save-dev
-```
-
-Next, install `eslint-plugin-icedfrisby`:
-
-```sh
-npm install eslint-plugin-icedfrisby --save-dev
+npm i --save-dev eslint eslint-plugin-icedfrisby
 ```
 
 ## Usage
 
-Add `icedfrisby` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `icedfrisby` to the plugins section of your `.eslintrc` configuration file.
 
 ```json
 {
@@ -28,21 +20,37 @@ Add `icedfrisby` to the plugins section of your `.eslintrc` configuration file. 
 }
 ```
 
-
-Then configure the rules you want to use under the rules section.
+Then configure the rules you want to use under the rules section. e.g:
 
 ```json
 {
     "rules": {
-        "icedfrisby/rule-name": 2
+        "icedfrisby/no-exclusive-tests:": ["error"]
     }
+}
+```
+
+## Configs
+
+This plugin exports a recommended config:
+
+```json
+{
+    "extends": [
+        "plugin:icedfrisby/recommended"
+    ]
 }
 ```
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+💼 Configurations enabled in.\
+✅ Set in the `recommended` configuration.
+
+| Name                                                   | Description              | 💼 |
+| :----------------------------------------------------- | :----------------------- | :- |
+| [no-exclusive-tests](docs/rules/no-exclusive-tests.md) | Disallow exclusive tests | ✅  |
+
 <!-- end auto-generated rules list -->
-
-

@@ -1,35 +1,54 @@
-# TODO (`no-exclusive-tests`)
+# Disallow exclusive tests (`icedfrisby/no-exclusive-tests`)
 
-Please describe the origin of the rule here.
+💼 This rule is enabled in the ✅ `recommended` config.
+
+<!-- end auto-generated rule header -->
+
+IcedFrisby has a feature that allows you to run tests exclusively by appending `.only()` to a test-suite or a test-case.
+This feature is really helpful to debug a failing test, so you don’t have to execute all of your tests.
+After you have fixed your test and before committing the changes you have to remove `.only()` to ensure all tests are executed on your build system.
+
+This rule reminds you to remove `.only()` from your tests by raising a warning whenever you are using the exclusivity feature.
 
 ## Rule Details
 
-This rule aims to...
+This rule looks for occurrences of `.only()` appended to IcedFrisby test cases.
 
 Examples of **incorrect** code for this rule:
 
 ```js
+frisby.create('test').only()
 
-// fill me in
+t.create('test').only()
 
+t.create('test')
+  .get('/foo/bar')
+  .expectJSON({ key: 'value' })
+  .only()
+
+t.create('test')
+  .only()
+  .get('/foo/bar')
+  .expectJSON({ key: 'value' })
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
+frisby.create('test')
 
-// fill me in
+t.create('test')
 
+t.create('test')
+  .get('/foo/bar')
+  .expectJSON({ key: 'value' })
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+* If you really want to execute only one test-suite or test-case because all other tests should not be executed, turn this rule off.
+* If you use another library which exposes a similar API to IcedFrisby this rule could raise false positives.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+* [`only()`](https://github.com/IcedFrisby/IcedFrisby/blob/master/API.md#only)
