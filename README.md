@@ -14,36 +14,29 @@ npm i --save-dev eslint eslint-plugin-icedfrisby
 
 ## Usage
 
-Add `icedfrisby` to the plugins section of your `.eslintrc` configuration file.
+As of eslint-plugin-icedfrisby 0.2.0 this plugin is compatible with ESLint>=8.21.0 only and must be configured using flat config format.
 
-```json
-{
-    "plugins": [
-        "icedfrisby"
-    ]
-}
-```
+Example `.eslint.config.js` file:
 
-Then configure the rules you want to use under the rules section. e.g:
+```js
+const icedfrisby = require("eslint-plugin-icedfrisby");
 
-```json
-{
-    "rules": {
-        "icedfrisby/no-exclusive-tests:": ["error"]
-    }
-}
-```
+module.exports = [
+  // This plugin exports a recommended config
+  icedfrisby.configs.recommended,
 
-## Configs
+  {
+    // Add icedfrisby to the plugins declaration
+    plugins: {
+      icedfrisby,
+    },
 
-This plugin exports a recommended config:
-
-```json
-{
-    "extends": [
-        "plugin:icedfrisby/recommended"
-    ]
-}
+    // Optionally customise or configure rules
+    rules: {
+      "icedfrisby/no-skipped-tests": ["error"]
+    },
+  },
+];
 ```
 
 ## Rules
