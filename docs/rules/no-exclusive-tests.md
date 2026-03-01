@@ -1,4 +1,6 @@
-# Disallow exclusive tests (`icedfrisby/no-exclusive-tests`)
+# icedfrisby/no-exclusive-tests
+
+📝 Disallow exclusive tests.
 
 💼 This rule is enabled in the ✅ `recommended` config.
 
