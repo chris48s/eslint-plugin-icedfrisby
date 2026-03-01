@@ -24,6 +24,14 @@ ruleTester.run("no-skipped-tests", rule, {
       errors: [{ messageId: "unexpectedSkip" }],
     },
     {
+      code: "frisby.create('test').skip(null)",
+      errors: [{ messageId: "unexpectedSkip" }],
+    },
+    {
+      code: "foobar.frisby.create('test').skip()",
+      errors: [{ messageId: "unexpectedSkip" }],
+    },
+    {
       code: "t.create('test').skip()",
       errors: [{ messageId: "unexpectedSkip" }],
     },

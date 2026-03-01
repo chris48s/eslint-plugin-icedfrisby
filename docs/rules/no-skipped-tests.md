@@ -1,4 +1,6 @@
-# Disallow skipped tests (`icedfrisby/no-skipped-tests`)
+# icedfrisby/no-skipped-tests
+
+📝 Disallow skipped tests.
 
 ⚠️ This rule _warns_ in the ✅ `recommended` config.
 

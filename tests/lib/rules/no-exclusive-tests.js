@@ -24,6 +24,14 @@ ruleTester.run("no-exclusive-tests", rule, {
       errors: [{ messageId: "unexpectedExclusive" }],
     },
     {
+      code: "frisby.create('test').only(null)",
+      errors: [{ messageId: "unexpectedExclusive" }],
+    },
+    {
+      code: "foobar.frisby.create('test').only()",
+      errors: [{ messageId: "unexpectedExclusive" }],
+    },
+    {
       code: "t.create('test').only()",
       errors: [{ messageId: "unexpectedExclusive" }],
     },
